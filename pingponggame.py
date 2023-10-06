@@ -75,12 +75,14 @@ while running:
 
         if ball.rect.y > 450 or ball.rect.y < 0:
             speed_y *= -1
-            speed_x *= -1
+
 
         if ball.rect.x <= 0:
+            finish = True
             window.blit(win2, (200, 200))
 
         if ball.rect.x >= 700:
+            finish = True
             window.blit(win1, (200, 200))
             
     racket1.reset()
